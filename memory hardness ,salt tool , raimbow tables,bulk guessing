@@ -1,0 +1,18 @@
+To understand why password algorithms use RAM, imagine a hacker's GPU as a massive factory with 5,000 tiny workers (processing cores).
+Testing a SHA-256 hash: The math is so simple that each worker can do it entirely in their head. 
+All 5,000 workers can guess passwords at the exact same time without stopping.
+Testing an Argon2id hash: The algorithm forces each worker to fill out a massive notebook of random data (e.g., 64 Megabytes of data) before they can finish the math.
+They cannot do it in their head; they must use a desk (RAM) to lay out the notebook.
+Because a GPU only has a limited amount of total memory ("desk space"), there is only enough room for, say, 10 notebooks at a time.
+The other 4,990 workers must sit idly and wait for a desk to clear.By forcing the math to require memory, the algorithm destroys the hacker's biggest advantage
+
+memory hardness wont work if attacker allocate entire memory to crack a single password hash it solves the problem for data beach and narrow it down to a single password 
+salt crypto tool
+for a single user we use a crypto tool called salt along with memory hardness to solve the problem further again salt combines a random string along with the password before hashing making it more complex for attacker even if they are able to get the orignal syntax from the hash they still have to guess the random string added in the syntax due to salt tool
+even if atacker get to know the salt since it is stored just next to hash it still serves the purpose of wasting the attackers time and also completely destroys raimbow tables 
+rainbow tables are precalculated hashes for millions of common passwords this is made useless due to salt since it changes the password before hashing to some other syntax due to adding of a random string 
+
+
+imagine an attacker steals a database of 1,000,000 users, and they guess that many people are using the password password123.
+Without a Salt: The attacker hashes password123 one time. They then check that single output against all 1,000,000 stolen hashes. If 5,000 users used that password, the attacker just cracked 5,000 accounts with a single calculation.
+With a Salt: Because every single user has a completely unique salt visible in the database, the attacker cannot reuse a guess. Even if they guess that everyone used password123, they must perform a unique calculation for every single user account:
