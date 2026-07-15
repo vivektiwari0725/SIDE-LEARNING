@@ -5,3 +5,6 @@ converted using some mathematical algorithm
 the data converted and the hash attached to it is stored in something known as hash map
 hash cannot be reversed to original data as in case of encryption
 example can be if we want to store peoples names they can be converted and stored as their phone numbers .
+use case are like websites dont keep your real pass saved insted they store hashed password and compare that stored hash with your password hash for authentication
+Data Integrity: Hashing allows systems to instantly verify if a file has been tampered with or corrupted during a download or transfer
+ hashing is the backbone of Hash Tables and Hash Maps. These structures allow software to store, search, and delete data in constant time
