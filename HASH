@@ -1,0 +1,7 @@
+process of creating a digital footprint for a piece of data hashing
+hash is a fixed length string of characters 
+same input always gives the same output for hash 
+converted using some mathematical algorithm 
+the data converted and the hash attached to it is stored in something known as hash map
+hash cannot be reversed to original data as in case of encryption
+example can be if we want to store peoples names they can be converted and stored as their phone numbers .
